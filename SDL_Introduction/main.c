@@ -1,6 +1,6 @@
 /*
 //  main.c
-//  SDL_Introduction
+//  SDL_Introduction : Creation of a gradient from black to white
 //
 //  Created by Sebastian Morera on 2021-08-21.
  
@@ -22,7 +22,7 @@ Mise à jour de l'écran:     SDL_RenderPresent(renderer) == SDL_Flip(ecran)
 #include <SDL2/SDL.h>
 #include <SDL2_image/SDL_image.h>
 
-#define WINDOW_WIDTH (640)
+#define WINDOW_WIDTH (256)
 #define WINDOW_HEIGHT (256)
 
 void SDL_ExitWithError(const char *message);
@@ -51,12 +51,12 @@ int main()
     SDL_Rect rectangle;
     for (int i = 0 ; i <= 255 ; i++)
     {
-        if (SDL_SetRenderDrawColor(renderer, 255-i, 255-i, 255-i, SDL_ALPHA_OPAQUE) != 0)
+        if (SDL_SetRenderDrawColor(renderer, 0+i, 0+i, 0+i, SDL_ALPHA_OPAQUE) != 0)
             SDL_ExitWithError("Impossible de changer la couleur du rendu");
         
-        rectangle.x = i;
-        rectangle.y = 0;
-        rectangle.w = 640;
+        rectangle.x = 0;
+        rectangle.y = i;
+        rectangle.w = 256;
         rectangle.h = 256;
         
         if (SDL_RenderFillRect(renderer, &rectangle) != 0)
@@ -103,52 +103,3 @@ void PAUSE()
         }
     }
 }
-
-
-// Code to draw
-/*
- SDL_Window *window = NULL; //, *lignes[256] = {NULL};;
- SDL_Renderer *renderer = NULL;
- 
- // Création fenêtre
- window = SDL_CreateWindow(title, SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, WINDOW_WIDTH, WINDOW_HEIGHT, SDL_WINDOW_SHOWN);
- if (!window)
-     SDL_ExitWithError("Creation fenetre echouee");
- 
- // Création renderer (triggers the program that control your graphics hardware and sets flags)
- renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED);     // creates a renderer to render our images
- if (!renderer)
-     SDL_ExitWithError("Initialisation du renderer");
- 
- 
- if (SDL_SetRenderDrawColor(renderer, 0, 255, 0, SDL_ALPHA_OPAQUE) != 0)
-     SDL_ExitWithError("Impossible de changer la couleur du rendu");
- 
- if (SDL_RenderDrawPoint(renderer, 100, 450) != 0)
-     SDL_ExitWithError("Impossible de dessiner un point");
- 
- if (SDL_RenderDrawLine(renderer, 50, 50, 500, 500) != 0)
-     SDL_ExitWithError("Impossible de dessiner une ligne");
- 
- SDL_Rect rectangle;
- rectangle.x = 300;
- rectangle.y = 300;
- rectangle.w = 200;
- rectangle.h = 120;
- 
- if (SDL_RenderFillRect(renderer, &rectangle) != 0)
-     SDL_ExitWithError("Impossible de dessiner un rectangle");
- 
-
- SDL_RenderPresent(renderer);    // Raffraichir le rendu
- 
- if (SDL_RenderClear(renderer) != 0)     // Nettoyer l'écran, effacer le rendu
-     SDL_ExitWithError("Effacement rendu echouee");
- 
- PAUSE(); // Mise en pause du programme
- 
- SDL_DestroyRenderer(renderer);
- SDL_DestroyWindow(window);
- SDL_Quit();
- 
- */
