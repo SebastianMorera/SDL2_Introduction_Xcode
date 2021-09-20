@@ -7,21 +7,35 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CDF0917A26D18B3D00B8C694 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CDF0917926D18B3D00B8C694 /* AppDelegate.m */; };
+		CD1A76E126F8D82A007BB954 /* SDL2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD1A76E026F8D82A007BB954 /* SDL2.framework */; };
+		CD1A76E226F8D82A007BB954 /* SDL2.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CD1A76E026F8D82A007BB954 /* SDL2.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		CD1A76E426F8D851007BB954 /* SDL2_image.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD1A76E326F8D851007BB954 /* SDL2_image.framework */; };
 		CDF0917C26D18B3E00B8C694 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CDF0917B26D18B3E00B8C694 /* Assets.xcassets */; };
-		CDF0917F26D18B3E00B8C694 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = CDF0917D26D18B3E00B8C694 /* MainMenu.xib */; };
-		CDF0918226D18B3E00B8C694 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CDF0918126D18B3E00B8C694 /* main.m */; };
+		CDF0918A26D18C4300B8C694 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = CDF0918926D18C4300B8C694 /* main.c */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		CDF0919026D194AD00B8C694 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				CD1A76E226F8D82A007BB954 /* SDL2.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		CD1A76E026F8D82A007BB954 /* SDL2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL2.framework; path = ../../../../../../../../Library/Frameworks/SDL2.framework; sourceTree = "<group>"; };
+		CD1A76E326F8D851007BB954 /* SDL2_image.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SDL2_image.framework; sourceTree = "<group>"; };
 		CDF0917526D18B3D00B8C694 /* SDL_Introduction.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SDL_Introduction.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		CDF0917826D18B3D00B8C694 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		CDF0917926D18B3D00B8C694 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		CDF0917B26D18B3E00B8C694 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		CDF0917E26D18B3E00B8C694 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		CDF0918026D18B3E00B8C694 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CDF0918126D18B3E00B8C694 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		CDF0918326D18B3E00B8C694 /* SDL_Introduction.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SDL_Introduction.entitlements; sourceTree = "<group>"; };
+		CDF0918926D18C4300B8C694 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +43,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD1A76E126F8D82A007BB954 /* SDL2.framework in Frameworks */,
+				CD1A76E426F8D851007BB954 /* SDL2_image.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +56,7 @@
 			children = (
 				CDF0917726D18B3D00B8C694 /* SDL_Introduction */,
 				CDF0917626D18B3D00B8C694 /* Products */,
+				CDF0918B26D18CFD00B8C694 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,15 +71,21 @@
 		CDF0917726D18B3D00B8C694 /* SDL_Introduction */ = {
 			isa = PBXGroup;
 			children = (
-				CDF0917826D18B3D00B8C694 /* AppDelegate.h */,
-				CDF0917926D18B3D00B8C694 /* AppDelegate.m */,
 				CDF0917B26D18B3E00B8C694 /* Assets.xcassets */,
-				CDF0917D26D18B3E00B8C694 /* MainMenu.xib */,
 				CDF0918026D18B3E00B8C694 /* Info.plist */,
-				CDF0918126D18B3E00B8C694 /* main.m */,
 				CDF0918326D18B3E00B8C694 /* SDL_Introduction.entitlements */,
+				CDF0918926D18C4300B8C694 /* main.c */,
 			);
 			path = SDL_Introduction;
+			sourceTree = "<group>";
+		};
+		CDF0918B26D18CFD00B8C694 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CD1A76E026F8D82A007BB954 /* SDL2.framework */,
+				CD1A76E326F8D851007BB954 /* SDL2_image.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -75,6 +98,7 @@
 				CDF0917126D18B3D00B8C694 /* Sources */,
 				CDF0917226D18B3D00B8C694 /* Frameworks */,
 				CDF0917326D18B3D00B8C694 /* Resources */,
+				CDF0919026D194AD00B8C694 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -122,7 +146,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				CDF0917C26D18B3E00B8C694 /* Assets.xcassets in Resources */,
-				CDF0917F26D18B3E00B8C694 /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -133,23 +156,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CDF0918226D18B3E00B8C694 /* main.m in Sources */,
-				CDF0917A26D18B3D00B8C694 /* AppDelegate.m in Sources */,
+				CDF0918A26D18C4300B8C694 /* main.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		CDF0917D26D18B3E00B8C694 /* MainMenu.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CDF0917E26D18B3E00B8C694 /* Base */,
-			);
-			name = MainMenu.xib;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		CDF0918426D18B3E00B8C694 /* Debug */ = {
@@ -268,14 +279,21 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = NO;
 				CODE_SIGN_ENTITLEMENTS = SDL_Introduction/SDL_Introduction.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(LOCAL_LIBRARY_DIR)/Frameworks",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = SDL_Introduction/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				OTHER_CODE_SIGN_FLAGS = "--deep";
 				PRODUCT_BUNDLE_IDENTIFIER = "Sebastian-Morera.SDL-Introduction";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -286,14 +304,21 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = NO;
 				CODE_SIGN_ENTITLEMENTS = SDL_Introduction/SDL_Introduction.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(LOCAL_LIBRARY_DIR)/Frameworks",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = SDL_Introduction/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				OTHER_CODE_SIGN_FLAGS = "--deep";
 				PRODUCT_BUNDLE_IDENTIFIER = "Sebastian-Morera.SDL-Introduction";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
